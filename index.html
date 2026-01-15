@@ -13,15 +13,17 @@
 
     <!-- idk man -->
 </head>
-<body>
-    
+
+<body>    
+
     <main>
+
         <header>
-            <img src="images/italian-pizza-chef-26533229.webp" width="400">
+            <img src="images/italian-pizza-chef-26533229.webp" width="300">
             <h1>Uncle Eugen's Pizza</h1>
-            <h2>Keeping Italian-American flavor real for 31 years!</h2>
+            <h2>Keeping Italian-American flavor real for 60 years!</h2>
             <hr>
-            <p>gabagool!</p>
+            <p>Quality you can taste, tradition you can cherish.</p>
             <a id="contact-button" href="#" role="button">Contact Us!</a>
         </header>
 
@@ -51,16 +53,53 @@
              <!-- toppings -->
              <fieldset>
                 <legend>Select Toppings</legend>
+                <label for="pepperoni">
+                    <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">Pepperoni
+                </label>
+                <label for="peppers">
+                    <input type="checkbox" id="peppers" name="toppings[]" value="peppers">Peppers
+                <label for="onion">
+                    <input type="checkbox" id="onion" name="toppings[]" value="onion">Onion
+                </label>
+                <label for="mushrooms">
+                    <input type="checkbox" id="mushrooms" name="toppings[]" value="mushrooms">Mushrooms
+                </label>
+                <label for="anchovies">
+                    <input type="checkbox" id="anchovies" name="toppings[]" value="anchovies">Anchovies
+                </label>
+                <label for="xtra cheese">
+                    <input type="checkbox" id="xtra cheese" name="toppings[]" value="xtra cheese">Extra Cheesy!
+                </label>
              </fieldset>
 
              <!-- pizza size -->
-              <fieldset>
+            <fieldset>
                 <legend>Select Size</legend>
-              </fieldset>
+                <select id="size" name="size">
+                    <option value="none">Select a size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xtra large">Extra Large</option>
+                </select>
+            </fieldset>
+            
+            <!-- comments and add. inst.-->
+            <label for="comment">Comments and Additional Instructions</label>
+            <textarea rows="5" id="comment" name="comment"></textarea>
 
-              <button type="submit" id="order-button">Place Order</button>
+            <!--- sign up box -->
+            <label for="signup">
+                <input type="checkbox" id="signup" name="signup">Sign me up for discounts and other news!
+            </label>
+
+            <!-- submit button -->
+            <button type="submit" id="order-button" name="submit" checked>Place Order</button>
+            
         </form>
 
     </main>
+
 </body>
+
 </html>

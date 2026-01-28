@@ -8,6 +8,8 @@ document.getElementById("pizza-form").onsubmit = () => {
     let lname = document.getElementById("lname").value.trim();
     let email = document.getElementById("email").value.trim();
     let size = document.getElementById("size").value;
+    let pickup = document.getElementById("pickup");
+    let delivery = document.getElementById("delivery");
 
     // first name validation
     if (!fname) {
@@ -27,7 +29,11 @@ document.getElementById("pizza-form").onsubmit = () => {
         isValid = false;
     }
 
-    
+    // pickup/delivery validation
+    if (!pickup.checked && !delivery.checked) {
+        document.getElementById("err-pickup").style.display = "block";
+        isValid = false;
+    }
 
     // size validation
     if (size == "none") {

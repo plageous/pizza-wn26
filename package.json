@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,9 +14,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/plageous/pizza-wn26/issues"
   },
-  "homepage": "https://github.com/plageous/pizza-wn26#readme"
+  "homepage": "https://github.com/plageous/pizza-wn26#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }

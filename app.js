@@ -11,6 +11,12 @@ const PORT = 3000;
 // tells express to use files in "public" directory
 app.use(express.static('public'));
 
+// "middleware", allowing express to read form data and allowing us to use it!
+app.use(express.urlencoded({ extended:true }))
+
+// stores orders
+const orders = [];
+
 // main route ('/')
 app.get('/', (req, res) => {
     // sends home.html file to client
@@ -22,7 +28,7 @@ app.get('/contact-us', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/contact.html`);
 });
 
-app.get('/thank-you', (req, res) => {
+app.post('/submit-order', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 });
 

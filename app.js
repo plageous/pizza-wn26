@@ -17,7 +17,12 @@ app.get('/', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
 
+// contact route
+app.get('/contact-us', (req, res) => {
+    res.sendFile(`${import.meta.dirname}/views/contact.html`);
+});
+
 // start server, listen on PORT
 app.listen(PORT, () => {
-    console.log(`Server running at https://localhost:${PORT}`);
+    console.log(`Server running at http://localhost:${PORT}`);
 });

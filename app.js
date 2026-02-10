@@ -28,8 +28,29 @@ app.get('/contact-us', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/contact.html`);
 });
 
-app.post('/submit-order', (req, res) => {
+app.post('/thank-you', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+});
+
+app.get('/admin', (req, res) => {
+    res.send(orders);
+});
+
+app.post('/submit-order', (req, res) => {
+    // create json object to store order data
+    const order = {
+        fname: req.body.fname,
+        lname: req.body.fname,
+        email: req.body.email,
+        method: req.body.method,
+        toppings: req.body.toppings ? req.body.toppings : "none",
+        size: req.body.size,
+        comment: req.body.comment,
+        timestamp: new Date()
+    };
+    orders.push(order);
+
+    res.send(orders);
 });
 
 // start server, listen on PORT
